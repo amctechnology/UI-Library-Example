@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import {
   initializeComplete,
-  InteractionStates,
+  INTERACTION_STATES,
   setAppHeight,
   SearchRecords,
   registerClickToDial,
@@ -10,8 +10,8 @@ import {
   registerOnPresenceChanged,
   registerEnableClickToDial,
   enableClickToDial,
-  ChannelTypes,
-  InteractionDirectionTypes } from '@amc-technology/davinci-api';
+  CHANNEL_TYPES,
+  INTERACTION_DIRECTION_TYPES } from '@amc-technology/davinci-api';
 import * as api from '@amc-technology/davinci-api';
 import {
   IScenario,
@@ -30,6 +30,8 @@ import {
 })
 export class AppComponent implements OnInit, AfterViewChecked {
   title = "SampleChannelApp";
+
+  config: any;
 
   iconPack = "https://amcdevstorage.blob.core.windows.net/icon-pack/";
   properties: Property[];
